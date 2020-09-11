@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ques4-Solution</title>
+</head>
+<body>
+    <!-- Question4 solution -->
+<h1>Solution for Ques 4</h1>
+    <script>
+        let avengers = [
+    {
+        name:"Abdul", 
+        age: 19 , 
+        country: "India", 
+        hobbies: ["cricket","WWE","Coding"]
+        },
+        {
+        name:"Anuj",
+         age: 15 , 
+         country: "USA",
+          hobbies: ["Baseball","NBA","studying"]
+        },
+        {
+        name:"Virat", 
+        age: 32 , 
+        country: "India", 
+        hobbies: ["cricket","FootBall","IPL"]
+        },
+        {
+        name:"Dr. Shawn Murphay", 
+        age: 43 , 
+        country: "Australia", 
+        hobbies: ["dancing","music","pranks"]
+        },
+        {
+        name:"Anne", 
+        age: 28 , 
+        country: "UK",
+         hobbies: ["listeing songs","writing songs","Karate"]
+        } ,
+        {
+        name:"Akash Gomes",
+         age: 12 , 
+         country: "India",
+          hobbies: ["pubg","chess","reading religious books"]
+        }
+];
+
+// a) part of the question 4 solution
+console.log("objects with age above 18 are: ");
+function Displayage(){    //display objects whose member age is above 18
+for(let i=0;i<avengers.length;i++){
+if(avengers[i].age >18){
+console.log(avengers[i]);
+}
+
+}
+
+}
+Displayage();
+
+//b) part of the question 4 solution
+console.log("objects with country india are: ");
+
+function countryInd(){
+//display objects whose member country is "India"
+for(let i=0;i<avengers.length;i++){
+if(avengers[i].country.search("India") == 0)
+{
+console.log(avengers[i]);
+}
+
+}
+}
+countryInd();//function calling
+    </script>
+</body>
+</html>

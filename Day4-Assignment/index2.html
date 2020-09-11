@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ques2-Solution</title>
+    <style>
+        input[type="text"] {
+	padding: 5px;
+	margin: 4px 22px;
+	border: 1px solid;
+}
+
+input[type="button"]
+{
+    padding: 5px;
+	margin: 4px 22px;
+	border: 1px solid;
+}
+    </style>
+</head>
+<body>
+    <!-- Ques2-Solution -->
+
+    <p><input id="Input1" type="text" placeholder="Field1"></p>
+     <p><input id="Input2" type="text" placeholder="Field2"></p>
+    <input id="btn" type="button" value="Make a copy" onclick="TextCopy()">
+<script>
+    function TextCopy(){
+    var text1 = document.getElementById("Input1").value;
+    document.getElementById("Input2").value = text1;
+    console.log( document.getElementById("Input2").value);
+    }
+</script>
+
+</body>
+</html>
