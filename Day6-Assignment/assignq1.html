@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0px;
+        padding:0px ;
+        box-sizing: border-box ;
+        
+    }
+    .question{
+      margin-top:10px;
+    }
+    .question>button{
+      padding:11px;
+      margin-top:10px;
+    }
+    button{
+        padding: 12px; 
+    }
+    .form {
+        margin-top: 20px;
+        margin-bottom:20px;
+        text-align:center;
+      }
+      input   {
+        height: 40px;
+        text-indent: 20px;
+      }
+      .table {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom:20px;
+        color: blanchedalmond;
+        background-color:rgb(142, 158, 245);
+        font-family: 'Montserrat',sans-serif;
+      }
+      th,
+      td {
+        height: 40px;
+        text-align: center;
+        padding: 10px;
+      }
+
+        .main{
+            width: 85%;
+            height: 100vh;
+            margin-left:30px;
+        }
+  
+  
+    </style>
+</head>
+<body>
+  
+    <div class="main ">
+      <div class="question">
+        <h1>Question 1</h1>
+<h2>Create a array containing five objects with properties { name, age , city , salary }</h2>
+  <h3>A. Display all the objects in a table</h3>
+  <h3>B. Create a search functionality for name and city</h3>
+  <h3>  C. Delete button to delete records</h3>
+  <h3>D. Data is not permanent</h3>
+
+    <button><a style="text-decoration: none;" href="assignQ2.html"> Go To Question 2</a></button>
+    
+      </div>
+
+      <div class="form">
+        <h1>Person's Record</h1>
+        <p> Add the new data</p>
+        <form onsubmit="adddata(event)">
+            <input   type="text" required placeholder="name" id="name" />
+            <input   type="number" required placeholder="age" id="age" />
+            <input   type="text" required placeholder="city" id="city"/>
+            <input   type="text"  placeholder="salary" id="salary">
+                     <button type="submit" >Add Data</button>
+        </form>
+      </div>
+
+            <div class="form">
+        <p>Search here to check the name and city respectively</p>
+        <input   type="text" placeholder="search name here" id="search" onkeyup="searchname()">
+        <input   type="text" placeholder="search city here" id="search1" onkeyup="searchcity()">
+</div>
+<div>  
+        <table class="table" border="1" cellspacing="0">
+    
+   
+            <thead>
+                <tr><th>S.no</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Salary</th>
+              <th>Actions</th></tr>
+            </thead>
+            <tbody id="oppo"></tbody>
+        </table></div>
+    </div>
+    
+    </body>
+<script src="JSassignQ1.js"></script>
+</html>

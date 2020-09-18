@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .question{
+      margin-top:10px;
+      margin-left:30px;
+    }
+    .question>button{
+      padding:11px;
+      margin-top:10px;
+    }
+
+      .data {
+        height: 500px;
+        width: 80%;
+        background-color: lightgray;
+        margin-left: 10%;
+        margin-top: 50px;
+        padding: 20px;
+        display: inline-block;
+      }
+ 
+      .table {
+        width: 100%;
+        margin-top: 20px;
+        /* font-family: calibri; */
+      }
+      th,
+      td {
+        height: 40px;
+        text-align: center;
+        padding: 5px;
+      }
+
+      .form {
+        margin-top: 20px;
+      }
+      input {
+        height: 40px;
+        text-indent: 20px;
+      }
+
+      button {
+        padding: 10px;
+      }
+
+     
+    </style>
+  </head>
+  <body>
+    <div class="question">
+        <h1>Question 2</h1>
+<h2>Create a blank array and later on create a add bus functionality bus objects contains { name, source , destination ,  number, passenger capacity }</h2>
+  <h3>A. A form to add new bus</h3>
+  <h3>B. Display data in table format</h3>
+  <h3>  C. Search by source and destination</h3>
+  <h3>D. Data should be stored permanently in local storage</h3>
+    
+      </div>
+    <div class="data">
+      <h1>Bus Record</h1>
+      <p>Add the new bus record</p>
+
+      <div class="form">
+        <form onsubmit="addBus(event)">
+          <input type="text" required placeholder="Name" id="name" />
+          <input type="text" required placeholder="Source" id="source" />
+          <input type="text" required placeholder=Destination id="destination" />
+          <input type="text" required placeholder="Bus Number" id="number" />
+          <input type="number" required placeholder="Passenger Capacity" id="capacity" />
+          <button type="submit">Add data</button>
+        </form>
+      </div>
+
+      <div class="form">
+          <h4 style="margin-left:5px;">Search in the record by source and destination</h4>
+        <input
+          type="text"
+          placeholder="Search By Source"
+          id="searchname"
+          onkeyup="searchSource()"
+        />
+        <input
+        type="text"
+        placeholder="Search By Destination"
+        id="searchname1"
+        onkeyup="searchDestination()"
+      />
+      </div>
+
+      <h3 style="margin-top:20px;margin-bottom:-10px;">All data in the table is stored permanently in local storage</h3>
+
+      <table border="1" class="table" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Sr no</th>
+            <th>Name</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Number</th>
+            <th>Passenger Capacity </th>
+          </tr>
+        </thead>
+        <tbody id="tdata"></tbody>
+      </table>
+    </div>
+    
+
+    <script src="JSassignQ2.js"></script>
+  </body>
+</html>
