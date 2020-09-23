@@ -41,18 +41,41 @@
       }
 
       .products {
+       
         width: 100%;
         height: auto;
         /* background-color: gray; */
-       position:relative;
+       
       }
+       
+       .filter{
+         text-align:center;
+         padding:10px;
+         margin:10px;
+       }
+
+       .filter>input{
+         padding:5px;
+         margin-left:5px;
+       }
+
+       .filter>button{
+         padding:5px;
+         margin-left:5px;
+       }
 
       .productwrapper {
+       
         height: auto;
         width: 80%;
         /* background-color: green; */
         margin-left: 10%;
         margin-bottom: 50px;
+        
+      }
+
+      #cart{
+        margin-top:60px;
       }
 
       .product {
@@ -86,9 +109,8 @@
       }
     
       .total{
-      position:absolute;
-      margin-left:30%;
-      margin-top:-3%;
+     padding-left:30%;
+     margin-top:-3.5%;
         
       }
 
@@ -96,9 +118,9 @@
         width:30px;
         height:20px;
         padding:5px;
-        margin-left:55%;
+        margin-left:25%;
         text-align: center;
-        margin-bottom: 10px;;
+        margin-top:5px;
       }
       .total>p{
         padding-left:100px;
@@ -120,6 +142,11 @@
     </div>
 
     <div class="products">
+      <div class="filter">
+        <input type="number" id="min">
+        <input type="number" id="max">
+        <button onclick="FilterProduct()">Search here...</button>
+      </div>
       <div class="productwrapper" id="productwrapper"></div>
     </div>
 

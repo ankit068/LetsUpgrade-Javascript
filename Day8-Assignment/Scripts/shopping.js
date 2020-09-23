@@ -144,6 +144,7 @@ function displayProducts(productsData, who = "productwrapper") {
         <p>${description}</p>
         <p>
           <button onclick="addToCart(${id})">Add to Cart</button>
+          
         </p>
       </div>`;
     } else if (who == "cart") {
@@ -160,6 +161,7 @@ function displayProducts(productsData, who = "productwrapper") {
           <button onclick="removeFromCart(${id})">Remove from Cart</button>
         </p>
       </div>`;
+     
     }
   });
 
@@ -188,18 +190,40 @@ function getProductByID(productArray, id) {
     return product.id == id;
   });
 }
+
+
+function FilterProduct()
+{
+  let minprice=document.getElementById("min").value;
+  let maxprice=document.getElementById("max").value;
+  let filterproducts=products.filter(function(product){
+    return product.price>=minprice && product.price <=maxprice;
+  });
+  displayProducts(filterproducts);
+}
+
+
+  
 let count;
 function addToCart(id) {
   // getting the product
   let pro = getProductByID(products, id);
   count=document.getElementById("count").value;
-  
-  //   putting in cart
+ 
+  const existing = cart.find(item => item.id === pro.id) 
+
+  if(existing){ //line2
+  alert('The product is already added to cart'); //line3
+  } else {
   cart.push(pro);
-  displayProducts(cart, "cart");
-  count++;
-  document.getElementById("count").value=count;
+ displayProducts(cart, "cart");
+ count++;
+ document.getElementById("count").value=count;
+ 
+  }
+  
 }
+
 
 function removeFromCart(id) {
   // getting the index based on id
